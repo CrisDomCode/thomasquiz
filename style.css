@@ -3,53 +3,49 @@
 
 body {
   font-family: 'Raleway', sans-serif;
-  background: radial-gradient(ellipse at 50% 28%, #ffffff 0%, #fce8e6 48%, #f5ceca 100%);
+  background: radial-gradient(ellipse at 50% 28%, #fffef8 0%, #fefdf0 22%, #f5f0df 58%, #ede3c0 100%);
   background-attachment: fixed;
-  color: #2b2b2b;
+  color: #1a1e4a;
   min-height: 100vh;
 }
 
 /* ── Wrapper centré ───────────────────────────────────────── */
 .quiz-wrapper {
   width: 100%;
-  max-width: 640px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 0 16px 60px;
+  padding: 0 16px 180px;
 }
 
 /* ── Header ──────────────────────────────────────────────── */
 .quiz-header {
   text-align: center;
   padding: 56px 8px 36px;
+  transition: opacity 0.4s ease;
+}
+
+.quiz-header.hidden {
+  display: none;
 }
 
 .quiz-header h1 {
-  font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.9rem, 5vw, 2.7rem);
   font-weight: 800;
   line-height: 1.25;
-  color: #1a1a2e;
+  color: #1a1e4a;
   margin-bottom: 16px;
 }
 
 .quiz-subtitle {
   font-size: 1.1rem;
-  color: #7a5a5a;
+  color: #6a5835;
   line-height: 1.4;
   font-weight: 400;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-/* ── Progress bar ──────────────────────────────────────── */
-.progress-bar-wrapper {
-  background: transparent;
-  height: 5px;
-}
-
-.progress-bar {
-  height: 5px;
-  background: #f66565;
-  width: 0%;
-  transition: width 0.45s ease;
-}
 
 /* ── Card ──────────────────────────────────────────────── */
 .quiz-card {
@@ -61,14 +57,37 @@ body {
 
 /* ── Steps ─────────────────────────────────────────────── */
 .step { display: none; }
-.step.active { display: block; }
+
+.step.active {
+  display: block;
+  animation: stepFadeIn 0.9s ease-out both;
+}
+
+.step.fading-out {
+  display: block;
+  animation: stepFadeOut 0.4s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes stepFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes stepFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
 
 .question-text {
-  font-size: 1.15rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #1a1a2e;
+  color: #1a1e4a;
   line-height: 1.45;
   margin-bottom: 26px;
+  text-align: center;
 }
 
 /* ── Options ─────────────────────────────────────────── */
@@ -81,12 +100,12 @@ body {
 
 .option-label {
   display: block;
-  background: #f66565;
+  background: #1a1e4a;
   border: none;
   border-radius: 10px;
   padding: 20px 24px;
   cursor: pointer;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease-in-out, transform 0.2s ease-in-out;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -105,14 +124,20 @@ body {
   line-height: 1.5;
   color: #fff;
   display: block;
+  text-align: center;
 }
 
 .option-label:hover {
-  background: #f87f7f;
+  background: #252a60;
+  transform: scale(1.03);
 }
 
 .option-label.selected {
-  background: #e85858;
+  background: #C9A227;
+}
+
+.option-label.selected .option-text {
+  color: #1a1e4a;
 }
 
 /* ── Result: inscription ─────────────────────────────── */
@@ -120,8 +145,8 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #e8f5e9;
-  color: #4caf50;
+  background: #fef8e7;
+  color: #C9A227;
   font-size: 1.4rem;
   display: flex;
   align-items: center;
@@ -130,51 +155,45 @@ body {
 }
 
 .result-title {
+  font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: 800;
-  color: #1a1a2e;
+  color: #1a1e4a;
   text-align: center;
   margin-bottom: 14px;
   line-height: 1.3;
 }
 
-.result-title .highlight { color: #f66565; }
+.result-title .highlight { color: #8B6914; }
 
 .result-body {
   font-size: 0.95rem;
-  color: #5a4a4a;
+  color: #5a4a2a;
   text-align: center;
   line-height: 1.7;
   margin-bottom: 10px;
 }
 
 .event-info {
-  background: #fdf0ef;
-  border-radius: 10px;
-  padding: 18px 22px;
+  text-align: center;
   margin: 24px 0 26px;
 }
 
-.event-label {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: #f66565;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-
 .event-date {
-  font-size: 0.97rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  color: #1a1a2e;
+  color: #1a1e4a;
   margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-.event-replay {
-  font-size: 0.82rem;
-  color: #f66565;
-  font-style: italic;
+.event-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #8B6914;
+  line-height: 1.3;
 }
 
 /* ── Form ─────────────────────────────────────────────── */
@@ -185,52 +204,124 @@ body {
 }
 
 .signup-form input {
-  border: 1.5px solid #e0c4c2;
+  border: 1.5px solid #d4c898;
   border-radius: 8px;
-  padding: 15px 18px;
-  font-size: 0.95rem;
+  padding: 18px 20px;
+  font-size: 1.05rem;
   color: #3a3a3a;
-  background: #fff;
+  background-color: #fff !important;
+  background-image: none;
+  -webkit-appearance: none;
+  appearance: none;
   outline: none;
   transition: border-color 0.2s;
   font-family: 'Raleway', sans-serif;
+  width: 75%;
+  min-width: 320px;
+  align-self: center;
 }
 
-.signup-form input:focus { border-color: #f66565; }
-.signup-form input::placeholder { color: #b8a0a0; }
+.signup-form input:focus { border-color: #C9A227; }
+.signup-form input::placeholder { color: #a09068; }
 
 .sms-note {
   font-size: 0.76rem;
-  color: #9a7a78;
+  color: #8a7a5a;
   margin-top: -4px;
+  text-align: center;
+}
+
+.rgpd {
+  font-size: 0.7rem;
+  color: #a09068;
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 2px;
+  max-width: 430px;
+  align-self: center;
+}
+
+/* ── Témoignages ─────────────────────────────────────── */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 22px 0 24px;
+}
+
+.testimonial {
+  padding: 4px 0;
+  margin: 0;
+}
+
+.testimonial p {
+  font-size: 0.88rem;
+  color: #4a3a2a;
+  line-height: 1.55;
+  font-style: italic;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.testimonial cite {
+  font-style: normal;
+}
+
+.result-empathy {
+  font-style: italic;
+  color: #4a3a2a;
+  margin-bottom: 0;
+  line-height: 1.45;
 }
 
 .btn-primary {
-  background: #f66565;
-  color: #fff;
+  background: #C9A227;
+  color: #1a1e4a;
   border: none;
   border-radius: 40px;
-  padding: 18px 28px;
-  font-size: 0.88rem;
+  padding: 18px 44px;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
   margin-top: 6px;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
+  width: auto;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.btn-primary:hover { background: #e04f4f; }
+.btn-primary:hover { background: #a88020; transform: scale(1.03); }
 .btn-primary:active { transform: scale(0.98); }
 
-/* ── Result: déjà épanouie ──────────────────────────── */
+.btn-main {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-sub {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+/* ── Result: déjà dans l'abondance ──────────────────── */
 .result-happy { text-align: center; padding: 10px 0; }
 
 .result-title-alt {
+  font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 800;
-  color: #1a1a2e;
+  color: #1a1e4a;
   margin-bottom: 20px;
   line-height: 1.4;
 }
@@ -239,8 +330,8 @@ body {
   display: inline-block;
   margin-top: 26px;
   background: transparent;
-  border: 2px solid #f66565;
-  color: #f66565;
+  border: 2px solid #1a1e4a;
+  color: #1a1e4a;
   border-radius: 40px;
   padding: 14px 30px;
   font-size: 0.88rem;
@@ -252,16 +343,16 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 
-.btn-share:hover { background: #f66565; color: #fff; }
+.btn-share:hover { background: #1a1e4a; color: #C9A227; }
 
 /* ── Confirmation ────────────────────────────────────── */
 .confirmation { text-align: center; padding: 24px 0; }
-.confirmation h2 { font-size: 1.35rem; color: #1a1a2e; margin-bottom: 16px; font-weight: 800; }
-.confirmation p { font-size: 0.97rem; color: #5a4a4a; line-height: 1.7; }
+.confirmation h2 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: #1a1e4a; margin-bottom: 16px; font-weight: 800; }
+.confirmation p { font-size: 0.97rem; color: #5a4a2a; line-height: 1.7; }
 
-/* ── Bio Nadège ──────────────────────────────────────── */
+/* ── Bio Thomas Gabillet ─────────────────────────────── */
 .bio-section {
-  background: #fce8e6;
+  background: #1a1e4a;
   padding: 60px 20px 80px;
 }
 
@@ -278,15 +369,16 @@ body {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: #2b2b2b;
+  color: #8a7a5a;
   text-transform: uppercase;
   margin-bottom: 6px;
 }
 
 .bio-name {
+  font-family: 'Playfair Display', serif;
   font-size: 1.9rem;
   font-weight: 800;
-  color: #f66565;
+  color: #C9A227;
   margin-bottom: 22px;
   line-height: 1.15;
 }
@@ -297,6 +389,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 24px;
+  border: 3px solid #C9A227;
 }
 
 .bio-photo-wrap img {
@@ -324,7 +417,7 @@ body {
 
 .bio-list li {
   font-size: 1rem;
-  color: #4a3a3a;
+  color: #4a3a2a;
   line-height: 1.6;
   padding-left: 16px;
   position: relative;
@@ -332,7 +425,7 @@ body {
 
 .bio-list li::before {
   content: '\2022';
-  color: #f66565;
+  color: #C9A227;
   font-weight: 900;
   position: absolute;
   left: 0;
@@ -351,4 +444,8 @@ body {
   .quiz-header { padding: 40px 8px 28px; }
   .bio-card { padding: 36px 24px; }
   .bio-name { font-size: 1.6rem; }
+  .quiz-subtitle { max-width: 100%; font-size: 1rem; }
+  .btn-primary { max-width: 280px; font-size: 0.92rem; }
+  .btn-main svg { width: 20px; height: 20px; }
+  .signup-form input { width: 90%; min-width: 320px; }
 }

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz - Masterclass Nadège Lefort</title>
+  <title>Quiz - Masterclass Abondance - Thomas Gabillet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,143 +14,90 @@
   <div class="quiz-wrapper">
 
     <div class="quiz-header">
-      <h1>Tu aimes ton partenaire,<br>mais l'idée d'un rapport te pèse ?</h1>
-      <p class="quiz-subtitle">Réponds à ces 4 questions pour découvrir<br>si cette masterclass gratuite est faite pour toi.</p>
-    </div>
-
-    <div class="progress-bar-wrapper">
-      <div class="progress-bar" id="progress-bar"></div>
+      <h1>Tu travailles dur,<br>mais l'abondance te résiste encore&nbsp;?</h1>
+      <p class="quiz-subtitle">Réponds à ces 4 questions pour découvrir si cette masterclass gratuite est faite pour toi.</p>
     </div>
 
     <div class="quiz-card" id="quiz-card">
 
       <!-- Step 1 -->
       <div class="step active" data-step="1">
-        <p class="question-text">Quand tu penses à ta sexualité aujourd'hui, tu te sens plutôt…</p>
+        <p class="question-text">Comment vis-tu ta relation à la prospérité et à l'argent en ce moment&nbsp;?</p>
         <ul class="options">
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q1" value="positive" />
-              <span class="option-text">Globalement épanouie et connectée, même s'il y a parfois des hauts et des bas</span>
-            </label>
-          </li>
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q1" value="medium" />
-              <span class="option-text">Un peu perdue ou déconnectée — quelque chose s'est essoufflé avec le temps</span>
-            </label>
-          </li>
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q1" value="negative" />
-              <span class="option-text">En souffrance, bloquée, sous pression de devoir le faire pour mon couple</span>
-            </label>
-          </li>
+          <li><label class="option-label"><input type="radio" name="q1" value="negative" /><span class="option-text">C'est une source de stress permanente — je travaille dur, mais je n'avance pas vraiment</span></label></li>
+          <li><label class="option-label"><input type="radio" name="q1" value="medium" /><span class="option-text">Je m'en sors, mais je sens un plafond invisible que je n'arrive pas à franchir</span></label></li>
+          <li><label class="option-label"><input type="radio" name="q1" value="positive" /><span class="option-text">L'argent coule naturellement dans ma vie — je vis dans l'abondance</span></label></li>
         </ul>
       </div>
 
       <!-- Step 2 -->
       <div class="step" data-step="2">
-        <p class="question-text">Ton désir ces derniers temps, c'est plutôt…</p>
+        <p class="question-text">Est-ce qu'il t'arrive de freiner tes propres élans ou de saboter tes opportunités au dernier moment&nbsp;?</p>
         <ul class="options">
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q2" value="positive" />
-              <span class="option-text">Présent et vivant — j'ai envie et je le vis sans culpabilité</span>
-            </label>
-          </li>
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q2" value="medium" />
-              <span class="option-text">En veille — il est là mais endormi, j'aimerais le retrouver</span>
-            </label>
-          </li>
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q2" value="negative" />
-              <span class="option-text">Quasi absent — j'ai l'impression qu'il a disparu et je ne sais pas pourquoi</span>
-            </label>
-          </li>
+          <li><label class="option-label"><input type="radio" name="q2" value="negative" /><span class="option-text">Oui, trop souvent : je démarre fort puis je trouve mille raisons de ne pas aller au bout</span></label></li>
+          <li><label class="option-label"><input type="radio" name="q2" value="medium" /><span class="option-text">Parfois — je procrastine ou je perds confiance exactement au moment où il faudrait agir</span></label></li>
+          <li><label class="option-label"><input type="radio" name="q2" value="positive" /><span class="option-text">Non, j'avance toujours avec conviction vers ce que je veux</span></label></li>
         </ul>
       </div>
 
       <!-- Step 3 -->
       <div class="step" data-step="3">
-        <p class="question-text">Par rapport au plaisir, tu te reconnais dans…</p>
+        <p class="question-text">Qu'est-ce qui te retient le plus de vivre l'abondance que tu mérites&nbsp;?</p>
         <ul class="options">
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q3" value="positive" />
-              <span class="option-text">Je me connais bien et je sais ce qui me fait du bien</span>
-            </label>
-          </li>
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q3" value="medium" />
-              <span class="option-text">J'ai du mal à ressentir du plaisir ou à l'exprimer librement</span>
-            </label>
-          </li>
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q3" value="negative" />
-              <span class="option-text">Le plaisir me semble lointain, voire inaccessible pour moi</span>
-            </label>
-          </li>
+          <li><label class="option-label"><input type="radio" name="q3" value="negative" /><span class="option-text">Des croyances limitantes sur l'argent, la peur de ne pas mériter, ou le syndrome de l'imposteur</span></label></li>
+          <li><label class="option-label"><input type="radio" name="q3" value="medium" /><span class="option-text">Je n'identifie pas exactement ce qui bloque, mais quelque chose freine ma progression</span></label></li>
+          <li><label class="option-label"><input type="radio" name="q3" value="positive" /><span class="option-text">Rien — j'attire naturellement les opportunités et la prospérité</span></label></li>
         </ul>
       </div>
 
       <!-- Step 4 -->
       <div class="step" data-step="4">
-        <p class="question-text">Ce qui te freine le plus en ce moment, c'est…</p>
+        <p class="question-text">Et si tu pouvais reprogrammer ton subconscient pour l'abondance, débloquer ton plein potentiel et attirer la prospérité naturellement…</p>
         <ul class="options">
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q4" value="positive" />
-              <span class="option-text">Pas grand chose — je suis plutôt à l'aise avec mon intimité</span>
-            </label>
-          </li>
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q4" value="medium" />
-              <span class="option-text">La culpabilité, la pression, ou la peur de décevoir</span>
-            </label>
-          </li>
-          <li>
-            <label class="option-label">
-              <input type="radio" name="q4" value="negative" />
-              <span class="option-text">Un blocage profond — comme si mon corps et mes émotions étaient coupés</span>
-            </label>
-          </li>
+          <li><label class="option-label"><input type="radio" name="q4" value="positive" /><span class="option-text">Oui, c'est exactement ce dont j'ai besoin maintenant</span></label></li>
+          <li><label class="option-label"><input type="radio" name="q4" value="medium" /><span class="option-text">Je suis ouvert(e), si c'est concret et pas du simple blabla</span></label></li>
+          <li><label class="option-label"><input type="radio" name="q4" value="negative" /><span class="option-text">Je ne sais plus vraiment si c'est possible pour moi...</span></label></li>
         </ul>
       </div>
 
       <!-- Result: inscription -->
       <div class="step result-signup" data-step="result-signup">
         <div class="result-icon">&#10003;</div>
-        <p class="result-title">Cette masterclass est <span class="highlight">faite pour toi !</span></p>
-        <p class="result-body">En 90 minutes, tu vas comprendre pourquoi ton désir s'est éteint et découvrir comment le rallumer, à ton rythme et sans pression.<br><br><strong>Comme plus de 2 000 femmes avant toi.</strong></p>
+        <p class="result-title">Cette masterclass est <span class="highlight">faite pour toi&nbsp;!</span></p>
+
+        <p class="result-body result-empathy" id="result-personalized"></p>
 
         <div class="event-info">
-          <p class="event-label">DATE DE LA MASTERCLASS</p>
-          <p class="event-date">Jeudi 23 avril à 20h &mdash; en ligne, gratuite</p>
-          <p class="event-replay">Les replays seront disponibles pour les inscrites.</p>
+          <p class="event-date">Masterclass Gratuite — Date à venir</p>
+          <p class="event-title">Abondance&nbsp;: Libère Ton Plein Potentiel</p>
+        </div>
+
+        <div class="testimonials">
+          <blockquote class="testimonial">
+            <p>«&nbsp;Thomas m'a fait comprendre en 90 minutes ce que des années de développement perso n'avaient pas réussi à débloquer. Ma relation à l'argent a complètement changé.&nbsp;» <cite>— Pierre-Antoine</cite></p>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>«&nbsp;Je pensais que mes blocages financiers étaient une fatalité. Cette masterclass m'a montré que c'était juste une question de reprogrammation.&nbsp;» <cite>— Léa</cite></p>
+          </blockquote>
         </div>
 
         <form class="signup-form" id="signup-form" onsubmit="handleSubmit(event)">
           <input type="text" name="prenom" placeholder="Ton prénom" required />
-          <input type="email" name="email" placeholder="Ton adresse e-mail" required />
+          <input type="email" name="email" placeholder="Ton email" required />
           <input type="tel" name="tel" placeholder="Ton numéro de téléphone (facultatif)" />
-          <p class="sms-note">Tu recevras le lien de connexion par SMS avant chaque session.</p>
-          <button type="submit" class="btn-primary">JE M'INSCRIS À LA MASTERCLASS GRATUITE &rarr;</button>
+          <p class="sms-note">pour recevoir un SMS de rappel le jour J</p>
+          <button type="submit" class="btn-primary"><span class="btn-main">JE M'INSCRIS À LA MASTERCLASS GRATUITE <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span><span class="btn-sub">Places limitées</span></button>
+          <p class="rgpd">En validant, tu recevras les offres de Thomas Gabillet, dont la Masterclass fait partie. Tu peux te désinscrire à tout moment via le lien présent dans chaque email.</p>
         </form>
       </div>
 
-      <!-- Result: déjà épanouie -->
+      <!-- Result: déjà dans l'abondance -->
       <div class="step result-happy" data-step="result-happy">
-        <p class="result-title-alt">Tu sembles déjà épanouie dans ton intimité !</p>
-        <p class="result-body">Cette masterclass s'adresse aux femmes qui traversent des difficultés avec leur désir ou leur plaisir. Ce n'est visiblement pas ton cas — et c'est une belle chose.</p>
-        <p class="result-body">Mais peut-être qu'une femme de ton entourage en a besoin. Partage-lui ce lien, ça pourrait tout changer pour elle.</p>
-        <button class="btn-share" onclick="shareLink()">Partager le lien d'inscription</button>
+        <p class="result-title-alt">Tu sembles déjà aligné(e) avec l'abondance — et c'est précieux.</p>
+        <p class="result-body">Ce n'est pas donné à tout le monde, et si tu en es là aujourd'hui, c'est que tu as fait un vrai travail sur toi.</p>
+        <p class="result-body">Cette masterclass n'est peut-être pas pour toi, mais tu connais sûrement un entrepreneur, un ami ou un proche qui se bat encore avec ses blocages financiers.</p>
+        <p class="result-body">Partage ce lien autour de toi&nbsp;: parfois un simple geste peut tout changer pour quelqu'un qui cherche sa voie.</p>
+        <button class="btn-share" onclick="shareLink()">Partager le lien</button>
       </div>
 
     </div>
@@ -159,26 +106,26 @@
   </div>
   <!-- /.quiz-wrapper -->
 
-  <!-- Bio Nadège -->
+  <!-- Bio Thomas Gabillet -->
   <section class="bio-section">
     <div class="bio-card">
       <p class="bio-presentee">Présenté par</p>
-      <h2 class="bio-name">Nadège Lefort</h2>
+      <h2 class="bio-name">Thomas Gabillet</h2>
       <div class="bio-photo-wrap">
-        <img src="img/nadege.jpg" alt="Nadège Lefort" />
+        <img src="img/thomas.jpg" alt="Thomas Gabillet" />
       </div>
-      <p class="bio-intro">Je suis Nadège.</p>
+      <p class="bio-intro">Je suis Thomas.</p>
       <ul class="bio-list">
-        <li><strong>Sexothérapeute</strong></li>
-        <li><strong>Autrice</strong> du livre <em>La petite Bible pratique des Orgasmes Féminins</em> et de nombreux articles, interviews radios et podcasts.</li>
-        <li><strong>Spécialiste</strong> du Désir et du Plaisir féminins</li>
-        <li><strong>Experte</strong> ménopause, douleurs intimes, vulvodynies, dyspareunies, vaginisme.</li>
-        <li><strong>Thérapeute psychocorporelle</strong>, j'utilise des outils alliant le corps et l'esprit : le vrai combo gagnant !</li>
-        <li><strong>Art-Thérapeute</strong>, j'aime utiliser les médiums artistiques dans mon approche thérapeutique.</li>
-        <li><strong>Conférencière, formatrice, animatrice de stages et d'ateliers</strong> sur la sexualité féminine avec <strong>plus de 15 ans d'expérience.</strong></li>
-        <li><strong>Créatrice de la Méthode VIBRE©.</strong></li>
+        <li><strong>Coach mindset et webmarketing</strong> pour entrepreneurs et indépendants</li>
+        <li><strong>Créateur de la Méthode DERI©</strong> — un raccourci puissant et rapide vers ton plein potentiel</li>
+        <li><strong>13 ans d'expérience</strong> à accompagner des entrepreneurs dans leur rapport à l'argent et au succès</li>
+        <li><strong>150+ clients transformés</strong> — des gens ordinaires qui ont débloqué leur potentiel extraordinaire</li>
+        <li><strong>Formateur</strong> en marketing digital à la CCI Bordeaux Gironde</li>
+        <li><strong>Auteur</strong> publié et créateur de contenu suivi par des milliers d'entrepreneurs</li>
+        <li><strong>Expert en subconscient</strong>, autosabotage et mindset d'abondance</li>
+        <li><strong>Formé à HEC Paris</strong> (2017) — diplômé de l'ESSCA</li>
       </ul>
-      <p class="bio-mission"><strong>Ma Mission :</strong> Eveiller chaque femme à être <strong>Libre</strong>, <strong>Créatrice</strong> et <strong>Souveraine</strong> dans sa sexualité.</p>
+      <p class="bio-mission"><strong>Ma Mission&nbsp;:</strong> T'aider à aligner ton subconscient avec l'abondance que tu mérites — pour que réussir devienne <strong>naturel</strong>.</p>
     </div>
   </section>
 
